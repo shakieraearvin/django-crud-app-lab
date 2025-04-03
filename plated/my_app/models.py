@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Recipe(models.Model):
@@ -8,4 +9,7 @@ class Recipe(models.Model):
     instructions = models.TextField(max_length=250)
 
     def __str__(self):
-        return self.title
+         return f'{self.title} ({self.id})'
+    
+    def get_absolute_url(self):
+        return reverse('recipe-detail', kwargs={'recipe_id': self.id})
