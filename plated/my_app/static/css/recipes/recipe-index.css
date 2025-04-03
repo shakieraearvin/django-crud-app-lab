@@ -5,6 +5,10 @@
     flex-wrap: wrap;
   }
   
+  .card-content img {
+    width: 300px;
+  }
+
   .card {
     width: 275px;
     margin: 10px;

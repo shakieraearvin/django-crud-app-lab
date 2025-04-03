@@ -1,4 +1,3 @@
-/* static/css/base.css  */
 
 html {
     box-sizing: border-box;
@@ -95,10 +94,9 @@ html {
   nav li {
     padding: 5px 8px;
   }
-  
-  .header-logo-container img {
+  .header-logo-container {
     margin: auto;
-    /* padding: 10px 20px 0; */
+    padding: 10px 20px 0;
     max-width: 500px;
   }
   
@@ -224,6 +222,8 @@ html {
       }
     }
   }
+
+  
   
   @media only screen and (min-width: 1024px) {
     main {

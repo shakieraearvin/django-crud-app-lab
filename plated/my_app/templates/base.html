@@ -14,12 +14,12 @@
   </head>
   <body>
     <header>
-      <div class="header-inner">
         <div class="header-logo-container">
           <a href="/">
-            <img src="{% static 'images/Plated_logo.svg' %}" alt="PlateD Logo" />
+              <img src="{% static 'images/plated-logo-resized.svg' %}" alt="PlateD Logo" />
           </a>
         </div>
+        
         <nav>
           <ul>
             <li><a href="{% url 'recipe-index' %}">All Recipes</a></li>
@@ -27,7 +27,6 @@
             <li><a href="{% url 'about' %}">About</a></li>
           </ul>
         </nav>
-      </div>
     </header>
     <main>
      {% block content %} 

@@ -1,17 +1,17 @@
 {% extends 'base.html' %} 
 {% load static %} 
 {% block head %}
-<link rel="stylesheet" href="{% static 'css/recipes/recipe-detail.css' %}" />
+<link rel="stylesheet" href="{% static 'css/recipes/recipe-details.css' %}" />
 {% endblock %} 
 {% block content %}
-<section class="recipe-container">
-  <div class="recipe-img">
+<section class="cat-container">
+  <div class="cat-img">
     <img src="{% static 'images/recipe.svg' %}" alt="A Recipe book" />
   </div>
-  <div class="recipe-details">
+  <div class="cat-details">
     <h1>{{ recipe.title }}</h1>
     <p>{{ recipe.description }}</p>
-    <div class="recipe-actions">
+    <div class="cat-actions">
         <a href="{% url 'recipe-update' recipe.id %}" class="btn warn">Edit</a>
         <a href="{% url 'recipe-delete' recipe.id %}" class="btn danger">Delete</a>
       </div>
