@@ -64,7 +64,7 @@ class CommentCreate(LoginRequiredMixin, CreateView):
 class CommentList(LoginRequiredMixin, ListView):
     model = Comment
 
-class CommentDetail(√, DetailView):
+class CommentDetail(LoginRequiredMixin, DetailView):
     model = Comment
 
 class CommentUpdate(LoginRequiredMixin, UpdateView):
