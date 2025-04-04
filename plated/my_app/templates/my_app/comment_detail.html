@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/comments/comment-detail.css' %}" />
+{% endblock %} 
+{% block content %}
+
+<div class="card" style="border-color: {{ comment.color }}">
+  <div class="card-bg" style="background-color: {{ comment.color }}"></div>
+  <div class="card-content">
+    <h2>{{ comment.name }}</h2>
+    <p>A {{ comment.color }} comment</p>
+  </div>
+</div>
+<a href="{% url 'comment-update' comment.id %}" class="btn warn">Edit</a>
+<a href="{% url 'comment-delete' comment.id %}" class="btn danger">Delete</a>
+
+
+{% endblock %}

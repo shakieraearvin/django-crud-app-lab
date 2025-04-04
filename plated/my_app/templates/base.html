@@ -22,9 +22,23 @@
         
         <nav>
           <ul>
+            {% if user.is_authenticated %}
             <li><a href="{% url 'recipe-index' %}">All Recipes</a></li>
+            <li><a href="{% url 'comment-index' %}">All Comments</a></li>
             <li><a href="{% url 'recipe-create' %}">Add a Recipe</a></li>
+            <li><a href="{% url 'comment-create' %}">Add a Comment</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
+            <li>
+              <form id="logout-form" method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Log out</button>
+              </form>
+            </li>
+            {% else %}
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'home' %}">Login</a></li>
+            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            {% endif %}
           </ul>
         </nav>
     </header>
